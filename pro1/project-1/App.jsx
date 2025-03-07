@@ -34,10 +34,10 @@ const App = () => {
 
       <section className="flex justify-center items-center">
         <div className=" p-5 shadow-lg flex flex-col items-center w-[30rem]">
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center justify-center space-x-4">
             <input
               type="text"
-              className="border-4 text-white  border-gray-300 rounded text-2xl p-2"
+              className="border-4 text-white  border-gray-300 rounded text-3xl p-2 w-[70%]"
               value={newTask}
               placeholder="Add text"
               onChange={(e) => setNewTask(e.target.value)}
@@ -48,7 +48,7 @@ const App = () => {
               }}
             />
             <button
-              className="text-gray-600 text-3xl border-4 border-gray-300 rounded px-5 py-2"
+              className="text-gray-600 text-3xl border-4 border-gray-300 rounded px-5 py-[0.7rem]"
               onClick={handleAddTask}
             >
               +
@@ -56,21 +56,22 @@ const App = () => {
           </div>
           <input
             type="text"
-            className="border-4 text-white border-gray-300 rounded text-2xl mt-4 p-2 w-[25.6rem]"
+            className="border-4 text-white border-gray-300 rounded text-3xl mt-4 p-2 w-[90%]"
             placeholder="Filter"
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
           />
         </div>
+        
       </section>
-
+      <div className="w-[25rem] border-1 border-white mx-auto " ></div>
       <section className="flex justify-center items-center">
         <div className=" rounded p-5 shadow-lg flex flex-col items-center mt-2 w-[30rem]">
           {handleFilter().length === 0 ? (
             <h2 className="text-2xl text-white">No results found</h2>
           ) : (
             handleFilter().map((task, index) => (
-              <div key={index} className="flex items-center justify-between w-full border-3 m-1 p-2 rounded border-white">
+              <div key={index} className="flex items-center justify-between border-3 m-1 p-2 rounded border-white w-[90%] ">
                 <h1 className={`text-4xl ${checkedTasks.includes(task) ? 'line-through text-gray-400' : 'text-white'}`}>{task}</h1>
                 <div>
                   <button
