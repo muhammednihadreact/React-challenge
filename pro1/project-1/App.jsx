@@ -29,15 +29,15 @@ const App = () => {
   return (
     <>
       <nav className="flex-wrap">
-        <h1 className="text-6xl font-bold text-white text-center my-[4rem]">Task Manager</h1>
+        <h1 className="text-6xl font-bold text-white text-center my-[3rem]">Task Manager</h1>
       </nav>
 
       <section className="flex justify-center items-center">
-        <div className="bg-white rounded p-5 shadow-lg flex flex-col items-center w-[30rem]">
+        <div className=" p-5 shadow-lg flex flex-col items-center w-[30rem]">
           <div className="flex items-center space-x-4">
             <input
               type="text"
-              className="border text-gray-600 border-gray-300 rounded text-2xl p-2"
+              className="border-4 text-white  border-gray-300 rounded text-2xl p-2"
               value={newTask}
               placeholder="Add text"
               onChange={(e) => setNewTask(e.target.value)}
@@ -48,7 +48,7 @@ const App = () => {
               }}
             />
             <button
-              className="text-gray-600 text-3xl border border-gray-300 rounded px-5 py-2"
+              className="text-gray-600 text-3xl border-4 border-gray-300 rounded px-5 py-2"
               onClick={handleAddTask}
             >
               +
@@ -56,7 +56,7 @@ const App = () => {
           </div>
           <input
             type="text"
-            className="border text-gray-600 border-gray-300 rounded text-2xl mt-4 p-2 w-[25rem]"
+            className="border-4 text-white border-gray-300 rounded text-2xl mt-4 p-2 w-[25.6rem]"
             placeholder="Filter"
             value={filter}
             onChange={(e) => setFilter(e.target.value)}
@@ -65,13 +65,13 @@ const App = () => {
       </section>
 
       <section className="flex justify-center items-center">
-        <div className="bg-white rounded p-5 shadow-lg flex flex-col items-center mt-2 w-[30rem]">
+        <div className=" rounded p-5 shadow-lg flex flex-col items-center mt-2 w-[30rem]">
           {handleFilter().length === 0 ? (
-            <h2 className="text-2xl text-gray-600">No results found</h2>
+            <h2 className="text-2xl text-white">No results found</h2>
           ) : (
             handleFilter().map((task, index) => (
-              <div key={index} className="flex items-center justify-between w-full border-1 m-1 p-2 rounded border-gray-300">
-                <h1 className={`text-4xl ${checkedTasks.includes(task) ? 'line-through text-gray-400' : 'text-gray-600'}`}>{task}</h1>
+              <div key={index} className="flex items-center justify-between w-full border-3 m-1 p-2 rounded border-white">
+                <h1 className={`text-4xl ${checkedTasks.includes(task) ? 'line-through text-gray-400' : 'text-white'}`}>{task}</h1>
                 <div>
                   <button
                     className="text-red-600 text-2xl bg-green-600 p-2 rounded mx-2"
