@@ -29,7 +29,7 @@ const App = () => {
   return (
     <>
       <nav className="flex-wrap">
-        <h1 className="text-6xl font-bold text-white text-center my-[3rem]">Task Manager</h1>
+        <h1 className="text-6xl font-bold text-white text-center my-[3rem]">Task Manager - sample</h1>
       </nav>
 
       <section className="flex justify-center items-center">
