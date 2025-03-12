@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>12-Day Advanced React Projects & Mastery Roadmap</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts: Poppins -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Configure Tailwind to use dark mode via class -->
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in {
+      animation: fadeIn 1s ease-out forwards;
+    }
+    /* Overlay for theme transition */
+    .theme-overlay {
+      position: fixed;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      z-index: 9999;
+      pointer-events: none;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0.5;
+    }
+    .animate-spread {
+      animation: spread 0.6s forwards;
+    }
+    @keyframes spread {
+      from {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 0.5;
+      }
+      to {
+        transform: translate(-50%, -50%) scale(100);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 antialiased text-2xl relative">
+  <!-- Toggle Theme Button positioned at top right -->
+  <button id="theme-toggle" class="absolute top-4 right-4 z-50 bg-gray-700 text-gray-100 p-3 rounded-full focus:outline-none">
+    <i class="fa-solid fa-moon"></i>
+  </button>
+
+  <div class="max-w-4xl mx-auto p-6">
+    <!-- Header -->
+    <header class="mb-8 fade-in">
+      <h1 class="text-5xl sm:text-7xl font-bold text-center mb-4 border-b border-pink-500 pb-2 animate-pulse">
+        <span class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 bg-clip-text text-transparent">
+          🚀 12-Day Advanced React Projects & Mastery Roadmap
+        </span>
+      </h1>
+      <p class="text-center">
+        Master advanced React topics, UI libraries, animations and build real-world projects!
+      </p>
+    </header>
+
+    <!-- Days 1-2: Advanced React Essentials -->
+    <section class="mb-8 fade-in">
+      <h2 class="text-4xl font-semibold mb-2 border-b border-pink-500 pb-2">Days 1–2: Advanced React Essentials</h2>
+      <div class="ml-4">
+        <h3 class="text-2xl font-medium mb-2">Focus Areas:</h3>
+        <ul class="list-disc ml-8 mb-4">
+          <li><strong>React Routing:</strong> Master React Router v6 with dynamic and nested routes, plus route guards.</li>
+          <li><strong>API Integration:</strong> Use Axios for fetching data, handling errors, and interceptors.</li>
+          <li><strong>Form Validation:</strong> Learn React Hook Form (or your preferred library) to build robust, validated forms.</li>
+        </ul>
+        <h3 class="text-2xl font-medium mb-2">Activities:</h3>
+        <ul class="list-disc ml-8">
+          <li>Watch engaging tutorials and review interactive docs.</li>
+          <li>Build a multi-page demo app that fetches data from a public API and includes a validated contact form.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Day 3: Material UI Deep Dive -->
+    <section class="mb-8 fade-in">
+      <h2 class="text-4xl font-semibold mb-2 border-b border-pink-500 pb-2">Day 3: Material UI Deep Dive</h2>
+      <div class="ml-4">
+        <h3 class="text-2xl font-medium mb-2">Focus Areas:</h3>
+        <ul class="list-disc ml-8 mb-4">
+          <li>Learn Material UI’s component library, theming, and customization features.</li>
+          <li>Integrate Material UI with your existing Tailwind CSS knowledge as needed.</li>
+        </ul>
+        <h3 class="text-2xl font-medium mb-2">Activities:</h3>
+        <ul class="list-disc ml-8">
+          <li>Follow a guided tutorial to build interactive cards, forms, and modals using Material UI.</li>
+          <li>Experiment with theme customization to match your personal brand.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Day 4: Animate with Framer Motion -->
+    <section class="mb-8 fade-in">
+      <h2 class="text-4xl font-semibold mb-2 border-b border-pink-500 pb-2">Day 4: Animate with Framer Motion</h2>
+      <div class="ml-4">
+        <h3 class="text-2xl font-medium mb-2">Focus Areas:</h3>
+        <ul class="list-disc ml-8 mb-4">
+          <li>Understand the basics of Framer Motion to bring smooth animations to your React apps.</li>
+          <li>Learn key animations like fades, slides, and layout transitions.</li>
+        </ul>
+        <h3 class="text-2xl font-medium mb-2">Activities:</h3>
+        <ul class="list-disc ml-8">
+          <li>Complete a beginner-friendly Framer Motion course.</li>
+          <li>Create mini animated components (e.g., animated buttons and page transitions) to practice.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Days 5-7: Flagship Portfolio Project -->
+    <section class="mb-8 fade-in">
+      <h2 class="text-4xl font-semibold mb-2 border-b border-pink-500 pb-2">Days 5–7: Flagship Portfolio Project</h2>
+      <div class="ml-4">
+        <p class="mb-2">Create your comprehensive portfolio website that integrates all your advanced React skills.</p>
+        <h3 class="text-2xl font-medium mb-2">Key Features:</h3>
+        <ul class="list-disc ml-8 mb-4">
+          <li><strong>Routing:</strong> Multiple pages (Home, About, Projects, Contact) using React Router.</li>
+          <li><strong>API Integration:</strong> Fetch project details or testimonials using Axios.</li>
+          <li><strong>Forms:</strong> Incorporate a contact form with validation using React Hook Form.</li>
+          <li><strong>Animations:</strong> Use Framer Motion for smooth transitions and interactive effects.</li>
+          <li><strong>Styling:</strong> Leverage Material UI components along with your Tailwind expertise.</li>
+        </ul>
+        <h3 class="text-2xl font-medium mb-2">Day-by-Day Breakdown:</h3>
+        <ul class="list-disc ml-8">
+          <li><strong>Day 5:</strong> Set up your project structure (using Create React App, Next.js, etc.) and implement basic routing and layout (header, footer).</li>
+          <li><strong>Day 6:</strong> Build individual pages, integrate API calls, and develop the contact form. Begin adding Framer Motion animations.</li>
+          <li><strong>Day 7:</strong> Refine the design, test for responsiveness and accessibility, and polish the overall user experience.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Days 8-10: Mini-Project Showcases -->
+    <section class="mb-8 fade-in">
+      <h2 class="text-4xl font-semibold mb-2 border-b border-pink-500 pb-2">Days 8–10: Mini-Project Showcases</h2>
+      <div class="ml-4">
+        <p class="mb-2">Build three mini-projects to reinforce and showcase different aspects of your learning:</p>
+        <h3 class="text-2xl font-medium mb-2">Project 1: Data-Driven Dashboard</h3>
+        <ul class="list-disc ml-8 mb-4">
+          <li><strong>Focus:</strong> Advanced routing and API integration.</li>
+          <li><strong>Example:</strong> A blog or dashboard that fetches data from a public API with smooth navigation.</li>
+        </ul>
+        <h3 class="text-2xl font-medium mb-2">Project 2: Interactive Landing Page</h3>
+        <ul class="list-disc ml-8 mb-4">
+          <li><strong>Focus:</strong> Animations and dynamic UI design.</li>
+          <li><strong>Example:</strong> A landing page with interactive hero sections and animated elements using Framer Motion.</li>
+        </ul>
+        <h3 class="text-2xl font-medium mb-2">Project 3: Component Library Demo</h3>
+        <ul class="list-disc ml-8">
+          <li><strong>Focus:</strong> UI component integration and form handling.</li>
+          <li><strong>Example:</strong> A showcase page for Material UI components and a sample form validated with React Hook Form.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Days 11-12: Final Polish & Enhancements -->
+    <section class="mb-8 fade-in">
+      <h2 class="text-4xl font-semibold mb-2 border-b border-pink-500 pb-2">Days 11–12: Final Polish & Enhancements</h2>
+      <div class="ml-4">
+        <h3 class="text-2xl font-medium mb-2">Focus Areas:</h3>
+        <ul class="list-disc ml-8">
+          <li><strong>Refinement:</strong> Test and optimize your flagship portfolio and mini-projects.</li>
+          <li><strong>Performance & Accessibility:</strong> Optimize code, ensure responsiveness, and run accessibility checks.</li>
+          <li><strong>Extra Enhancements:</strong> Add dark/light mode toggles, smooth scrolling, and error boundaries.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Final Tips -->
+    <section class="mb-8 fade-in">
+      <h2 class="text-4xl font-semibold mb-2 border-b border-pink-500 pb-2">Final Tips</h2>
+      <div class="ml-4">
+        <ul class="list-disc ml-8">
+          <li><strong>Time Management:</strong> Dedicate the first half of each day to learning and the second half to coding.</li>
+          <li><strong>Iterate & Refine:</strong> Continuously review and polish your code as you learn new techniques.</li>
+          <li><strong>Community Engagement:</strong> Share your progress on forums like r/reactjs or r/SideProject for feedback and inspiration.</li>
+          <li><strong>Resource Library:</strong> Bookmark documentation and tutorials for quick reference.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center border-t border-gray-700 pt-4 fade-in">
+      <p class="text-sm">© 2025 Advanced React Projects & Mastery Roadmap. Happy Coding!</p>
+    </footer>
+  </div>
+
+  <!-- Theme Toggle Script with Spreading Overlay Animation -->
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+
+    function updateThemeIcon() {
+      if (document.documentElement.classList.contains('dark')) {
+        // In dark mode, show the crescent moon icon.
+        toggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
+      } else {
+        // In light mode, show the sun icon.
+        toggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+      }
+    }
+
+    toggle.addEventListener('click', function() {
+      // Get the toggle button's position.
+      const rect = toggle.getBoundingClientRect();
+      // Create the overlay element.
+      const overlay = document.createElement('div');
+      overlay.classList.add('theme-overlay');
+      // Position the overlay at the center of the toggle button.
+      overlay.style.left = (rect.left + rect.width / 2) + 'px';
+      overlay.style.top = (rect.top + rect.height / 2) + 'px';
+      // Determine the color for the spreading effect based on the next active theme.
+      const willBeDark = !document.documentElement.classList.contains('dark');
+      overlay.style.background = willBeDark ? '#111827' : '#f3f4f6';
+      document.body.appendChild(overlay);
+      // Trigger the spreading animation.
+      overlay.classList.add('animate-spread');
+      overlay.addEventListener('animationend', () => overlay.remove());
+      
+      // Toggle the theme.
+      document.documentElement.classList.toggle('dark');
+      updateThemeIcon();
+    });
+
+    // Initialize the icon based on the default theme.
+    updateThemeIcon();
+  </script>
+</body>
+</html>
+
